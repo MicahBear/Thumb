@@ -1,13 +1,21 @@
-import "./App.css";
-import { Dashboard, First } from "./pages/First";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Dashboard from "./routes/Dashboard";
+import First from "./routes/first";
+
+let router = createBrowserRouter([
+  {
+    path: "/",
+    element: <First />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+]);
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<First />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-    </Routes>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
