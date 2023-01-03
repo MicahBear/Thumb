@@ -1,10 +1,11 @@
-import { Route } from "react-router-dom";
 import "./App.css";
+import { Dashboard, First } from "./pages/First";
 
 function App() {
   return (
     <Routes>
-      <Route />
+      <Route path="/" element={<First />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
