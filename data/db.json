@@ -1,0 +1,15 @@
+{
+  "vegetables": [
+    {
+      "id": 1,
+      "title": "arugula",
+      "maturaty": 60
+    },
+    {
+      "id": 2,
+      "title": "basil",
+      "transplant": 6,
+      "maturaty": 70
+    }
+  ]
+}

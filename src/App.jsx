@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard from "./routes/Dashboard";
-import First from "./routes/first";
+import Dashboard from "./pages/Dashboard";
+import First from "./pages/first";
 
 let router = createBrowserRouter([
   {
@@ -9,7 +9,7 @@ let router = createBrowserRouter([
     element: <First />,
   },
   {
-    path: "/dashboard",
+    path: "dashboard",
     element: <Dashboard />,
   },
 ]);
