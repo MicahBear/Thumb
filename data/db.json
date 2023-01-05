@@ -3,13 +3,28 @@
     {
       "id": 1,
       "title": "arugula",
-      "maturaty": 60
+      "maturaty": 40
     },
     {
       "id": 2,
       "title": "basil",
-      "transplant": 6,
-      "maturaty": 70
+      "maturaty": 74,
+      "seed": 6
+    },
+    {
+      "id": 3,
+      "title": "beets",
+      "maturaty": 76
+    },
+    {
+      "id": 4,
+      "title": "broccoli",
+      "maturaty": 50
+    },
+    {
+      "id": 5,
+      "title": "bellpeppers",
+      "maturaty": 85
     }
   ]
 }
