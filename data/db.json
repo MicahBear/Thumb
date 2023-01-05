@@ -2,29 +2,38 @@
   "vegetables": [
     {
       "id": 1,
-      "title": "arugula",
-      "maturaty": 40
+      "title": "artichoke",
+      "maturity": null
     },
     {
       "id": 2,
       "title": "basil",
-      "maturaty": 74,
+      "maturity": 74,
       "seed": 6
     },
     {
       "id": 3,
       "title": "beets",
-      "maturaty": 76
+      "maturity": 76,
+      "seed": 5
     },
     {
       "id": 4,
       "title": "broccoli",
-      "maturaty": 50
+      "maturity": 50,
+      "seed": 5
     },
     {
       "id": 5,
-      "title": "bellpeppers",
-      "maturaty": 85
+      "title": "cabbage",
+      "maturity": 85,
+      "seed": 5
+    },
+    {
+      "id": 6,
+      "title": "cauliflower",
+      "maturity": null,
+      "seed": 5
     }
   ]
 }
