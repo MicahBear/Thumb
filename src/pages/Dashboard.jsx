@@ -6,7 +6,7 @@ export default function Dashboard() {
       <div className="dashboard--nav">
         <i class="fa-solid fa-bars"></i>
       </div>
-      <div className="dashboard--date">
+      <div className="dashboard--date flex flex-row">
         <h2 className="dashboard--month">January</h2>
         <h2 className="dashboard--year">2023</h2>
       </div>
