@@ -52,6 +52,30 @@
       "title": "corn",
       "maturity": null,
       "seed": 3
+    },
+    {
+      "id": 10,
+      "title": "cucumber",
+      "maturity": null,
+      "seed": 4
+    },
+    {
+      "id": 11,
+      "title": "eggplant",
+      "maturity": null,
+      "seed": 9
+    },
+    {
+      "id": 12,
+      "title": "kale",
+      "maturity": null,
+      "seed": 5
+    },
+    {
+      "id": 13,
+      "title": "kohlrabi",
+      "maturity": null,
+      "seed": 5
     }
   ]
 }
