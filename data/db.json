@@ -34,6 +34,24 @@
       "title": "cauliflower",
       "maturity": null,
       "seed": 5
+    },
+    {
+      "id": 7,
+      "title": "celery",
+      "maturity": null,
+      "seed": 11
+    },
+    {
+      "id": 8,
+      "title": "collards",
+      "maturity": null,
+      "seed": 5
+    },
+    {
+      "id": 9,
+      "title": "corn",
+      "maturity": null,
+      "seed": 3
     }
   ]
 }
