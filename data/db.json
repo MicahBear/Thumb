@@ -94,6 +94,48 @@
       "title": "onions",
       "maturity": null,
       "seed": 9
+    },
+    {
+      "id": 17,
+      "title": "parsley",
+      "maturity": null,
+      "seed": 10
+    },
+    {
+      "id": 18,
+      "title": "peas",
+      "maturity": null,
+      "seed": 4
+    },
+    {
+      "id": 19,
+      "title": "peppers",
+      "maturity": null,
+      "seed": 8
+    },
+    {
+      "id": 20,
+      "title": "spinach",
+      "maturity": null,
+      "seed": 5
+    },
+    {
+      "id": 21,
+      "title": "squash",
+      "maturity": null,
+      "seed": 4
+    },
+    {
+      "id": 22,
+      "title": "swiss chard",
+      "maturity": null,
+      "seed": 5
+    },
+    {
+      "id": 23,
+      "title": "tomatoe",
+      "maturity": null,
+      "seed": 7
     }
   ]
 }
