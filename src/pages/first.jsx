@@ -14,11 +14,16 @@ export default function First() {
 
   return (
     <div className="first-page">
-      <h2>What's your grow zone?</h2>
-      <div>
-        <input type="text" className="first--input" placeholder="Zone 8b.." />
-        <button onClick={handleSubmit}>lets grow..</button>
-      </div>
+      <form onClick={handleSubmit}>
+        <label htmlFor="zoneInput">What's your grow zone?</label>
+        <input
+          id="zoneInput"
+          type="text"
+          className="first--input"
+          placeholder="Zone 8b.."
+        />
+        <button type="submit">lets grow..</button>
+      </form>
       <a className="first--btn" onClick={dontKnow}>
         don't know
       </a>
