@@ -1,26 +1,24 @@
 export default function First() {
-  function dontKnow() {
+  const dontKnow = () => {
     // testing the dont know buttong is handled and outputs as f() says.
     // all good
     console.log("btn dont know was clicked");
-  }
+  };
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    // currently submit is handled by enter key from user. the onsubmit btn would cause a refresh. and the target would be incorrect.
-    // currently this console log out puts the value the user inputs.
-    console.log(e.target[0].value);
-  }
+    // pulling in user input from how js does it.
+    const inputValue = document.querySelector(".first--input").value;
+    console.log(inputValue);
+  };
 
   return (
     <div className="first-page">
       <h2>What's your grow zone?</h2>
-      <form onSubmit={handleSubmit}>
+      <div>
         <input type="text" className="first--input" placeholder="Zone 8b.." />
-        {/*need addtional review*/}
-        {/* <a type="submit">lets grow</a> */}
-      </form>
+        <button onClick={handleSubmit}>lets grow..</button>
+      </div>
       <a className="first--btn" onClick={dontKnow}>
         don't know
       </a>
