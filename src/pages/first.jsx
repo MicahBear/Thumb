@@ -8,13 +8,13 @@ export default function First() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // pulling in user input from how js does it.
-    const inputValue = document.querySelector(".first--input").value;
-    console.log(inputValue);
+    const inputValue = e.target.elements.zoneInput.value;
+    console.dir(inputValue);
   };
 
   return (
     <div className="first-page">
-      <form onClick={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="zoneInput">What's your grow zone?</label>
         <input
           id="zoneInput"
