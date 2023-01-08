@@ -9,24 +9,6 @@ export default function Calendar() {
             <th className="calendar--table-header p-2 border-r h-10 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 xl:text-sm text-xs">
               <span className="calendar--day">sun</span>
             </th>
-            <th className="calendar--table-header p-2 border-r h-10 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 xl:text-sm text-xs">
-              <span className="calendar--day">mon</span>
-            </th>
-            <th className="calendar--table-header p-2 border-r h-10 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 xl:text-sm text-xs">
-              <span className="calendar--day">tues</span>
-            </th>
-            <th className="calendar--table-header p-2 border-r h-10 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 xl:text-sm text-xs">
-              <span className="calendar--day">wed</span>
-            </th>
-            <th className="calendar--table-header p-2 border-r h-10 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 xl:text-sm text-xs">
-              <span className="calendar--day">thur</span>
-            </th>
-            <th className="calendar--table-header p-2 border-r h-10 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 xl:text-sm text-xs">
-              <span className="calendar--day">fri</span>
-            </th>
-            <th className="calendar--table-header p-2 border-r h-10 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 xl:text-sm text-xs">
-              <span className="calendar--day">sat</span>
-            </th>
           </tr>
         </thead>
         <tbody>

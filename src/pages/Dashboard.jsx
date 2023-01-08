@@ -1,6 +1,8 @@
 import Calendar from "../components/Calendar";
 
 export default function Dashboard() {
+  const dateNow = new Date();
+  console.log(dateNow);
   return (
     <div className="dashboard-page">
       <div className="dashboard--nav">
@@ -12,6 +14,7 @@ export default function Dashboard() {
       </div>
       <div className="dashboard--calendar">
         <Calendar />
+        <h1></h1>
       </div>
       <div className="dashboard--info-container">
         <div className="dashboard--schedule">
