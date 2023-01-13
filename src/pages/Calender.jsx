@@ -1,5 +1,6 @@
 import React from "react";
 import Day from "../components/Day";
+import Veggie from "../components/Veggie";
 
 export default function Calendar() {
   return (
@@ -68,6 +69,14 @@ export default function Calendar() {
           </tr>
         </tbody>
       </table>
+      <Veggie />
     </div>
   );
+}
+
+{
+  /*
+  imported veggie component to test for fetch
+  initiated veggie component in calendar page and end of page.
+  */
 }
