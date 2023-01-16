@@ -1,15 +1,41 @@
 import { useEffect, useState } from "react";
-
 function Veggie() {
-  const [data, setData] = useState([]);
+  //   const [plant, setData] = useState();
+  //   const { plantId } = useParams()
 
+  //   useEffect(() => {
+  //     fetch("/db.json")
+  //       .then((response) => response.json())
+  //       .then((plant) => setData(plant));
+  //   }, []);
+
+  const [plant, setPlant] = useState([]);
+  const getData = () => {
+    fetch("db.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        return response.json();
+      })
+      .then((info) => {
+        console.log(info, "info");
+        setPlant(info);
+      });
+  };
   useEffect(() => {
-    fetch("/db.json")
-      .then((response) => response.json())
-      .then((data) => setData(data));
+    getData();
   }, []);
-
-  console.log({ data });
+  return (
+    <div className="">
+      {plant &&
+        plant.length > 0 &&
+        plant.map((item) => <p key={item.id}>{item.title}</p>)}
+    </div>
+  );
 }
 
 export default Veggie;
