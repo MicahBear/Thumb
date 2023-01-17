@@ -15,7 +15,7 @@ I want to provide a resource for people to allow for less friction of growing yo
 ### Project Timeline
 
 - ~~Figma design based in greyscale.~~
-- ==Active :==.Complete Demo. ==Due :== Jan 20,2023
+- ==Active== Complete Demo. ==Due== Jan 20,2023
 - User testing and feedback
 - Review feedback create tickets
 - Make improvements based on feedback and need base
