@@ -15,7 +15,10 @@ I want to provide a resource for people to allow for less friction of growing yo
 ### Project Timeline
 
 - ~~ Figma design based in greyscale. ~~
-- <span style="color:blue">Active :</span>.Complete Demo. Due : Jan 20,2023
+- <p style="color:blue">
+  Active :
+  </p>.Complete Demo. Due : Jan 20,2023
+
 - User testing and feedback
 - Review feedback create tickets
 - Make improvements based on feedback and need base
