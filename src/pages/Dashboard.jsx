@@ -1,6 +1,9 @@
+import { useLocation } from "react-router-dom";
 import Calendar from "./Calender";
-
 export default function Dashboard() {
+  const location = useLocation();
+  console.log(location.state);
+
   return (
     <div className="dashboard-page">
       <div className="dashboard--nav">
