@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
   background-color: rgb(209 213 219);
+} */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+button {
+  border: 1px solid black;
+  background-color: rgb(209 213 219);
+}
+
+.first-page {
+  background-color: #e5e7eb;
+}
+.first--container {
+  margin: 0 auto;
 }

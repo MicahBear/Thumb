@@ -12,29 +12,38 @@ export default function First() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // pulling in user input from how js does it.
+    // pulling in user input
     const zone = e.target.elements.zoneInput.value;
     console.log(zone);
-    // localStorage.setItem(grow, userZone);
+    // localStorage.setItem(zone, zone);
     navigate("/dashboard", { state: { zone } });
   };
 
   return (
-    <div className="first-page">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="zoneInput">What's your grow zone?</label>
-        <input
-          id="zoneInput"
-          type="text"
-          className="first--input"
-          placeholder="Zone 8b.."
-          onChange={(e) => setUserZone(e.target.value)}
-        />
-        <a type="submit">lets grow..</a>
-      </form>
-      <a className="first--btn" onClick={dontKnow}>
-        don't know
-      </a>
-    </div>
+    <main className="first-page flex items-center justify-center min-h-screen">
+      <section className="first--container flex flex-col items-center justify-center relative bg-white p-10 rounded-lg shadow-md">
+        <form className="first--form flex flex-col" onSubmit={handleSubmit}>
+          <h1
+            className="first--labelInput text-xl font-bold"
+            htmlFor="zoneInput"
+          >
+            What's your grow zone?
+          </h1>
+          <input
+            id="zoneInput"
+            type="text"
+            className="first--input"
+            placeholder="Zone 8b.."
+            onChange={(e) => setUserZone(e.target.value)}
+          />
+          <button className="rounded-lg first--submit" type="submit">
+            lets grow..
+          </button>
+        </form>
+        <a className="first--dkBtn" onClick={dontKnow}>
+          don't know
+        </a>
+      </section>
+    </main>
   );
 }
