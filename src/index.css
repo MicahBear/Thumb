@@ -21,3 +21,6 @@ button {
 .first--container {
   margin: 0 auto;
 }
+.dashboard-nav {
+  background-color: #e5e7eb;
+}
