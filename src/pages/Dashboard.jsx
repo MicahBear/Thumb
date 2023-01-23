@@ -9,15 +9,16 @@ export default function Dashboard() {
       <div className="dashboard--nav">
         <i className="fa-solid fa-bars"></i>
       </div>
-      <div className="dashboard--date flex flex-row">
-        <h2 className="dashboard--month">January</h2>
-        <h2 className="dashboard--year">2023</h2>
-      </div>
-      <div className="dashboard--calendar">
-        <Calendar />
-        <h1></h1>
-      </div>
-      <div className="dashboard--info-container">
+      <main className="container mx-auto mt-10 bg-white rounded shadow w-full">
+        <div className="dashboard--date header flex justify-between border-b p-2">
+          <h2 className="dashboard--month">January 2023</h2>
+        </div>
+        <div className="dashboard--calendar">
+          <Calendar />
+          <h1></h1>
+        </div>
+      </main>
+      <div className="dashboard--info-container border">
         <div className="dashboard--schedule">
           <i className="fa-solid fa-circle-chevron-down"></i>
           <h4>schedule</h4>

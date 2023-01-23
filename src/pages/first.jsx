@@ -38,7 +38,7 @@ export default function First() {
           />
           <div className="flex items-center justify-between">
             <button
-              className="hover:bg-blue-700 font-bold py-2 px-4 rounded focus:shadow-outline first--submit"
+              className="hover:bg-gray-300 font-bold py-2 px-4 rounded focus:shadow-outline first--submit"
               type="submit"
             >
               lets grow..
