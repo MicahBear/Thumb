@@ -1,8 +1,10 @@
 import { useLocation } from "react-router-dom";
+import { getMonth } from "../utility";
 import Calendar from "./Calender";
 export default function Dashboard() {
   const location = useLocation();
   console.log(location.state);
+  console.table(getMonth());
 
   return (
     <div className="dashboard-page">
