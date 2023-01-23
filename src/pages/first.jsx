@@ -32,17 +32,26 @@ export default function First() {
           <input
             id="zoneInput"
             type="text"
-            className="first--input"
-            placeholder="Zone 8b.."
+            className="first--input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="enter zone"
             onChange={(e) => setUserZone(e.target.value)}
           />
-          <button className="rounded-lg first--submit" type="submit">
-            lets grow..
-          </button>
+          <div className="flex items-center justify-between">
+            <button
+              className="hover:bg-blue-700 font-bold py-2 px-4 rounded focus:shadow-outline first--submit"
+              type="submit"
+            >
+              lets grow..
+            </button>
+
+            <a
+              className="first--dkBtn align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+              onClick={dontKnow}
+            >
+              don't know
+            </a>
+          </div>
         </form>
-        <a className="first--dkBtn" onClick={dontKnow}>
-          don't know
-        </a>
       </section>
     </main>
   );
