@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import Calendar from "./Calender";
+import Calendar from "./Calendar";
 export default function Dashboard() {
   const location = useLocation();
   console.log(location.state);
