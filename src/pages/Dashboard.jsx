@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Calendar from "./Calendar";
+import Nav from "./Nav";
 export default function Dashboard() {
   const location = useLocation();
   console.log(location.state);
@@ -7,7 +8,7 @@ export default function Dashboard() {
   return (
     <div className="dashboard-page">
       <div className="dashboard--nav">
-        <i className="fa-solid fa-bars"></i>
+        <Nav />
       </div>
       <main className="container mx-auto mt-10 bg-white rounded shadow w-full">
         <div className="dashboard--calendar">

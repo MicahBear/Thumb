@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Calendar from "./pages/Calender";
+import Calendar from "./pages/Calendar";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/ErrorPage";
 import First from "./pages/first";
