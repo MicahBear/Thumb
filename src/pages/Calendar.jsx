@@ -44,7 +44,7 @@ export default function Calendar() {
   return (
     <div className="calendar--container">
       <FullCalendar
-        height="50vh"
+        height="25vh"
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
         headerToolbar={{
           left: "prev,next today",
