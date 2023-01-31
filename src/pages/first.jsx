@@ -35,12 +35,12 @@ export default function First() {
             <input
               id="zoneInput"
               type="text"
-              className="first--input  appearance-none border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="first--input  appearance-none border-none rounded w-full pt-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="enter zone"
               onChange={(e) => setUserZone(e.target.value)}
             />
             <hr />
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between pt-4">
               <button
                 className="hover:text-gray-300 font-bold py-2 px-4 rounded focus:shadow-outline first--submit"
                 type="submit"
@@ -49,7 +49,7 @@ export default function First() {
               </button>
 
               <a
-                className="first--dkBtn align-baseline font-bold text-sm text-blue-500 hover:text-gray-300 cursor-pointer"
+                className="first--dkBtn align-baseline font-bold text-sm hover:text-gray-300 cursor-pointer"
                 onClick={dontKnow}
               >
                 don't know
