@@ -15,7 +15,7 @@ I want to provide a resource for people to allow for less friction of growing yo
 ### Project Timeline
 
 - ~~Figma design based in greyscale.~~
-- **Active** Complete Demo. **Due** Feb 1st
+- ~~Complete Demo. **Due** Feb 1st~~
 - Create landing page for potential users to sign up for demo and notificaiton
 - User testing and feedback
 - Review feedback create tickets
@@ -27,7 +27,8 @@ I want to provide a resource for people to allow for less friction of growing yo
 
 #### Current ScreenShot
 
-![Screenshot](assets/Screenshot%202023-01-17%20081235.png)
+![Screenshot](assets/Screenshot%202023-01-31%20143600.png)
+![ScreenShot](assets/zone-screenshot-01-31-23.png)
 
 ### Built with
 
