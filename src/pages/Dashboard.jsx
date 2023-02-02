@@ -8,7 +8,7 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard-page">
-      <div className="dashboard--nav">
+      <div className="dashboard--nav pb-10">
         <Nav />
       </div>
       <main className="container mx-auto mt-10 bg-white rounded shadow w-full">

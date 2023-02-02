@@ -24,10 +24,10 @@ export default function First() {
     <div>
       <Nav />
       <main className="first-page flex items-center justify-center min-h-screen">
-        <section className="first--container container flex flex-col items-center justify-center relative bg-white">
-          <form className="first--form flex flex-col" onSubmit={handleSubmit}>
+        <section className="first--container container flex flex-col mb-20 items-center justify-center relative bg-white">
+          <form className="first--form flex flex-col " onSubmit={handleSubmit}>
             <h1
-              className="first--labelInput text-xl font-bold"
+              className="first--labelInput text-xl font-bold pb-8"
               htmlFor="zoneInput"
             >
               What's your grow zone?
