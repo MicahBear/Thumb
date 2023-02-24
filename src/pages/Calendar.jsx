@@ -18,10 +18,17 @@ export default function Calendar() {
   console.log(dt, "check");
   const [currentEvents, setCurrentEvents] = useState([]);
 
+  // setting up portal 
+  function AddEventPortal(){
+    const[showModal, setShowModal] = useState(false)
+  }
+
+
   const handleDateClick = (selected) => {
-    const title = prompt("please enter new title for event");
-    const calendarApi = selected.veiew.calendar;
-    calendarApi.unselected();
+    const title = prompt(
+      "please enter new title for event");
+    const calendarApi = selected.view.calendar;
+    // calendarApi.unselected();
 
     if (title) {
       calendarApi.addEvent({
