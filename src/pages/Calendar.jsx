@@ -8,26 +8,53 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 // import { List, ListItem, ListItemText, Typography } from "@mui/material";
 import { DateTime } from "luxon";
 
+
 export default function Calendar() {
+   const [title, setTitle] = useState('');
+  const [events, setCurrentEvents] = useState([]);
+  const [isModalOpen,setIsModalOpen]= useState(false)
+ 
   const frostDate = "2023-04-11";
   console.log(frostDate);
   let dt = DateTime.fromObject({ year: 2023, month: 4, day: 11 })
     .minus({ days: 75 })
     .toISODate();
   // dt.minus({ days: 35 });
-  console.log(dt, "check");
-  const [currentEvents, setCurrentEvents] = useState([]);
+  // console.log(dt, "check");
+  // const [modal, setModal] = useState(false)
 
-  // setting up portal 
-  function AddEventPortal(){
-    const[showModal, setShowModal] = useState(false)
+  //!user hits div and triggers this function
+  const handleDateClick = () => {
+    
+    setIsModalOpen(true);
+    }
+    
+    // const calendarApi = selected.view.calendar;
+    // calendarApi.unselected();
+
+    // if (title) {
+    //   calendarApi.addEvent({
+    //     id: `${selected.dateStr}-${title}`,
+    //     title,
+    //     start: selected.startStr,
+    //     end: selected.endStr,
+    //     allDay: selected.allDay,
+    //   });
+    // }
+  // };
+  const handleModalClose=()=>{
+    setIsModalOpen(false)
   }
-
-
-  const handleDateClick = (selected) => {
-    const title = prompt(
-      "please enter new title for event");
-    const calendarApi = selected.view.calendar;
+   const handleInputChange=(event)=> {
+    console.log(event.target.value)
+    setTitle(event.target.value);
+  }
+  const handleFormSubmit=(selected)=>{
+    // selected.preventDefault()
+    // selected.stopPropagation()
+    // event.preventDefault()
+    console.log(selected.event)
+     const calendarApi = selected.view.calendar;
     // calendarApi.unselected();
 
     if (title) {
@@ -39,7 +66,10 @@ export default function Calendar() {
         allDay: selected.allDay,
       });
     }
-  };
+    // setCurrentEvents([...events,eventToAdd])
+    setIsModalOpen(false)
+  }
+
   const handleEventClick = (selected) => {
     if (
       window.confirm(
@@ -65,7 +95,7 @@ export default function Calendar() {
         dayMaxEvent={true}
         select={handleDateClick}
         eventClick={handleEventClick}
-        eventsSet={(events) => setCurrentEvents(events)}
+        eventsSet={events}
         initialEvents={[
           { id: "1ss", title: "seed spinach", date: dt },
           { id: "2sla", title: "seed lettuce", date: "2023-02-06" },
@@ -75,6 +105,29 @@ export default function Calendar() {
           { id: "3hkb", title: "harvest kale", date: "2023-01-30" },
         ]}
       />
+    
+  {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={handleModalClose}>
+              &times;
+            </span>
+
+            <form onSubmit={handleFormSubmit}>
+              <label htmlFor="title">Title:</label>
+              <input
+                type="text"
+                name="title"
+                id="title"
+                value={title}
+                onChange={handleInputChange}
+              />
+
+              <button type="submit">Save</button>
+            </form>
+          </div>
+        </div>
+      )}
       {/* <List>
         {currentEvents.map((event) => (
           <ListItem
