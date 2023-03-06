@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createRef, useState } from "react";
 // import veggie from "../../data/veggie";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
@@ -10,9 +10,12 @@ import { DateTime } from "luxon";
 
 
 export default function Calendar() {
-   const [title, setTitle] = useState('');
-  const [events, setCurrentEvents] = useState([]);
+  let calendarRef= createRef()
+  const [title, setTitle] = useState('');
+  const [events, setEvents] = useState([]);
+  const [dateInfo,setDateInfo]=useState()
   const [isModalOpen,setIsModalOpen]= useState(false)
+
  
   const frostDate = "2023-04-11";
   console.log(frostDate);
@@ -24,8 +27,8 @@ export default function Calendar() {
   // const [modal, setModal] = useState(false)
 
   //!user hits div and triggers this function
-  const handleDateClick = () => {
-    
+  const handleDateClick = (x) => {
+    setDateInfo(x)
     setIsModalOpen(true);
     }
     
@@ -50,21 +53,31 @@ export default function Calendar() {
     setTitle(event.target.value);
   }
   const handleFormSubmit=(selected)=>{
-    // selected.preventDefault()
+    selected.preventDefault()
     // selected.stopPropagation()
     // event.preventDefault()
-    console.log(selected.event)
-     const calendarApi = selected.view.calendar;
+    console.log('event: ',selected.event)
+     const calendarApi = calendarRef.current.getApi();
     // calendarApi.unselected();
+    console.log('calendar: ', calendarApi)
 
     if (title) {
-      calendarApi.addEvent({
-        id: `${selected.dateStr}-${title}`,
+      // calendarApi.addEvent({
+      //   id: `${title}`,
+      //   title,
+      //   start: calendarApi.currentDate,
+      //   // end: selected.endStr,
+      //   allDay: true,
+      // });
+      const e =
+      {id: `${title}`,
         title,
-        start: selected.startStr,
-        end: selected.endStr,
-        allDay: selected.allDay,
-      });
+        start: dateInfo.start,
+        // end: selected.endStr,
+        allDay: true,
+    }
+    setEvents([...events, e])
+      // })
     }
     // setCurrentEvents([...events,eventToAdd])
     setIsModalOpen(false)
@@ -89,21 +102,22 @@ export default function Calendar() {
           center: "title",
           right: "timeGridWeek,timeGridDay",
         }}
+        ref={calendarRef}
         initialView="dayGridWeek"
         editable={true}
         selectable={true}
         dayMaxEvent={true}
         select={handleDateClick}
         eventClick={handleEventClick}
-        eventsSet={events}
-        initialEvents={[
-          { id: "1ss", title: "seed spinach", date: dt },
-          { id: "2sla", title: "seed lettuce", date: "2023-02-06" },
-          { id: "3hka", title: "harvest kale", date: "2023-02-10" },
-          { id: "1tl", title: "transplant lettuce", date: "2023-02-04" },
-          { id: "2slb", title: "seed lettuce", date: "2023-02-02" },
-          { id: "3hkb", title: "harvest kale", date: "2023-01-30" },
-        ]}
+        events={events}
+        // initialEvents={[
+        //   { id: "1ss", title: "seed spinach", date: dt },
+        //   { id: "2sla", title: "seed lettuce", date: "2023-02-06" },
+        //   { id: "3hka", title: "harvest kale", date: "2023-02-10" },
+        //   { id: "1tl", title: "transplant lettuce", date: "2023-02-04" },
+        //   { id: "2slb", title: "seed lettuce", date: "2023-02-02" },
+        //   { id: "3hkb", title: "harvest kale", date: "2023-01-30" },
+        // ]}
       />
     
   {isModalOpen && (
